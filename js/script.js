@@ -36,16 +36,16 @@ var quotes = [
    - Cse the random number to `return` a random quote object from the `quotes` array.
 ***/
 
-function getRandomQuote(array){
-  var randomNumber = Math.floor(Math.random() * quotes.length); //Generator a random number
+function getRandomQuote(){
+  var randomQuotetion = Math.floor(Math.random() * quotes.length); //Generator a random number
   for (var i = 0; i < quotes.length; i+=1){
-    var randomquote = quotes[randomNumber]; // // randomquote variable with the index set to my randomNumber variable
+    var randomquote = quotes[randomQuotetion]; // // randomquote variable with the index set to my randomNumber variable
     return randomquote; // Return randomquote variable
   }
 }
 var result = getRandomQuote(quotes);
 
-// Create the `printQuote` function to:
+// Create the `printQuote` function to printQuote
 function printQuote(){
   var myrandomQuotes = getRandomQuote(); // Call the `getRandomQuote` function and assign it to a variable.
   var fullHTML = '<p class= "Quote ">' + myrandomQuotes.quote + '</p>' + // Add the quote and source section to the HTML string.
