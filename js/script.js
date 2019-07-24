@@ -38,25 +38,23 @@ var quotes = [
 
 function getRandomQuote(){
   var randomQuotetion = Math.floor(Math.random() * quotes.length); //Generator a random number
-  for (var i = 0; i < quotes.length; i+=1){
-    var randomquote = quotes[randomQuotetion]; // // randomquote variable with the index set to my randomNumber variable
-    return randomquote; // Return randomquote variable
+  var randomquote = quotes[randomQuotetion]; // // randomquote variable with the index set to my randomNumber variable
+  return randomquote; // Return randomquote variable
   }
-}
+
 var result = getRandomQuote(quotes);
 
 // Create the `printQuote` function to printQuote
 function printQuote(){
   var myrandomQuotes = getRandomQuote(); // Call the `getRandomQuote` function and assign it to a variable.
-  var fullHTML = '<p class= "Quote ">' + myrandomQuotes.quote + '</p>' + // Add the quote and source section to the HTML string.
-                 '<p class= "Source">' + myrandomQuotes.source;
+  var fullHTML = '<p class= Quote >' + myrandomQuotes.quote + '</p>' + // Add the quote and source section to the HTML string.
+                 '<p class= Source >' + myrandomQuotes.source;
   //check for optional properties
   if(myrandomQuotes.hasOwnProperty('citation') === true && myrandomQuotes.hasOwnProperty('year') === true){
-    fullHTML += '<span class= " Citation ">' + myrandomQuotes.citation + '</span>' +
-    '<span class= " Year ">' + myrandomQuotes.year + '</span>';
-  }else{
-    fullHTML += '</p>';
+    fullHTML += '<span class= Citation >' + myrandomQuotes.citation + '</span>' +
+    '<span class= Year >' + myrandomQuotes.year + '</span>';
 
+    fullHTML += '</p>';
   }
 
     // set the innnerHTML of the .quote-box to the complete HTML string
