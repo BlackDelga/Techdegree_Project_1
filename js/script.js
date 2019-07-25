@@ -47,16 +47,16 @@ var result = getRandomQuote(quotes);
 // Create the `printQuote` function to printQuote
 function printQuote(){
   var myrandomQuotes = getRandomQuote(); // Call the `getRandomQuote` function and assign it to a variable.
-  var fullHTML = '<p class= Quote >' + myrandomQuotes.quote + '</p>' + // Add the quote and source section to the HTML string.
-                 '<p class= Source >' + myrandomQuotes.source;
+  var fullHTML = '<p class= quote >' + myrandomQuotes.quote + '</p>' + // Add the quote and source section to the HTML string.
+                 '<p class= source  >' + myrandomQuotes.source;
   //check for optional properties
   if(myrandomQuotes.hasOwnProperty('citation') === true && myrandomQuotes.hasOwnProperty('year') === true){
-    fullHTML += '<span class= Citation >' + myrandomQuotes.citation + '</span>' +
-    '<span class= Year >' + myrandomQuotes.year + '</span>';
+    fullHTML += '<span class= citation >' + myrandomQuotes.citation + '</span>' +
+    '<span class= year >' + myrandomQuotes.year + '</span>';
 
-    fullHTML += '</p>';
+
   }
-
+    fullHTML += '</p>';
     // set the innnerHTML of the .quote-box to the complete HTML string
 document.getElementById('quote-box').innerHTML = fullHTML;
 
